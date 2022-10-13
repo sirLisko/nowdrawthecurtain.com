@@ -1,0 +1,92 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+      font-family: "freight-big-pro", serif;
+  background-color: #E39FC8;
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+body {
+  color: #000;
+}
+
+span {
+  display: block;
+}
+a {
+  color: currentColor;
+}
+.App {
+  display: flex;
+  height: calc(100vh - 2rem);
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+@media (min-width: 550px) {
+  .App {
+    padding-left: 3rem;
+    font-size: 2rem;
+  }
+}
+.footer {
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 1rem;
+}
+.logo img {
+  height: 75px;
+}
+
+  // .eyes__container {
+  //   animation: App-logo-spin infinite 10s ease-in-out;
+  // }
+
+
+h1 {
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 3rem;
+  line-height: 1;
+  max-width: 300px;
+}
+
+@media (min-width: 550px) {
+  h1 {
+    font-size: 6rem;
+    max-width: 650px;
+  }
+}
+
+
+@keyframes App-logo-spin {
+  0% {
+    transform: translateX(100%);
+  }
+  10% {
+    transform: translateX(100%);
+  }
+  35% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
