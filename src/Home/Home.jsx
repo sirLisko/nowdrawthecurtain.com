@@ -1,7 +1,7 @@
 import Footer from "../Footer/Footer";
 import Bio from "../Bio/Bio";
 import Event from "../Event/Event";
-// import Venue from "../Venue/Venue";
+import Venue from "../Venue/Venue";
 
 function Home() {
   const invite = window.location.search.split("?x=")?.[1];
@@ -39,7 +39,7 @@ function Home() {
       </div>
       <Event />
       <Bio />
-      {/* <Venue /> */}
+      <Venue />
     </div>
   );
 }
