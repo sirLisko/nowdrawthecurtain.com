@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import throttle from "lodash.throttle";
 import debounce from "lodash.debounce";
 
-import face from "./Now-draw-the-curtain_Ana-Curbelo_Untepid_sin-ojos.png";
+import face from "./face-no-eyes.png";
 import "./Face.scss";
 
 const left = 180;
@@ -15,13 +15,13 @@ const Face = () => {
   const rY = document.body.clientWidth - right;
 
   useEffect(() => {
-    const ghostMove = (e: MouseEvent) => {
+    const faceMove = (e: MouseEvent) => {
       if (!showFace) {
         setShowFace(true);
       }
       setMousePosition(e.clientX);
     };
-    const handleMouseMove = () => throttle(ghostMove, 100);
+    const handleMouseMove = () => throttle(faceMove, 100);
     const handleShow = () =>
       debounce(() => {
         setShowFace(false);
@@ -29,8 +29,16 @@ const Face = () => {
 
     document.body.addEventListener("mousemove", handleMouseMove());
     document.body.addEventListener("mousemove", handleShow());
-    return () =>
+    document.addEventListener("scroll", () => {
+      console.log("asdasdsasadsadsa");
+    });
+    document.addEventListener("scroll", handleShow());
+    return () => {
       document.body.removeEventListener("mousemove", handleMouseMove());
+      document.body.removeEventListener("mousemove", handleShow());
+      document.body.removeEventListener("scroll", handleMouseMove());
+      document.body.removeEventListener("scroll", handleShow());
+    };
   }, [showFace]);
 
   const leftEye =

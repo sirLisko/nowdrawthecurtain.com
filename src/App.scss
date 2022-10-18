@@ -6,10 +6,13 @@ body {
 }
 
 body {
-      font-family: "freight-big-pro", serif;
-  background-color: #E39FC8;
+  font-family: var(--font-main);
+  background-color: var(--color-main);
 }
 
+h1 {
+  font-family: var(--font-header);
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -21,8 +24,10 @@ body {
   color: #000;
 }
 
-span {
-  display: block;
+.App-header, .event {
+  span {
+    display: block;
+  }
 }
 a {
   color: currentColor;
@@ -34,9 +39,10 @@ a {
   flex-direction: column;
   padding: 1rem;
   font-size: 1.5rem;
-}
-@media (min-width: 550px) {
-  .App {
+  max-width: 1200px;
+  margin: 0 auto;
+  @media (min-width: 550px) {
+    min-height: 1000px;
     padding-left: 3rem;
     font-size: 2rem;
   }

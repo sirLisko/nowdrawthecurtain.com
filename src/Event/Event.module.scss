@@ -1,0 +1,29 @@
+.box {
+  overflow: hidden;
+  min-height: 1000px;
+  height: calc(100vh - 2rem);
+  display: flex;
+  align-items: center;
+  @media (max-width: 549px) {
+    padding: 7rem 0;
+  }
+}
+
+.container {
+  margin: 10vh auto;
+  max-width: 1200px;
+  padding: 3rem;
+  background-color: rgba(0,0,0,.15);
+  transform: rotate(-3deg);
+
+}
+
+.blurp {
+  font-size: 1.5rem;
+  background-color: var(--color-main);
+  transform: rotate(3deg);
+  padding: 2rem;
+  @media (min-width: 550px) {
+    font-size: 2rem;
+  }
+}
