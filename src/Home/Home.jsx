@@ -4,10 +4,16 @@ import Event from "../Event/Event";
 // import Venue from "../Venue/Venue";
 
 function Home() {
+  const invite = window.location.search.split("?x=")?.[1];
   return (
     <div>
       <div className="App">
         <header className="App-header">
+          {invite && (
+            <h2>
+              <b>{atob(invite)}</b> <span>you are invited to</span>
+            </h2>
+          )}
           <h1>Now draw the curtain</h1>
           <p>
             Solo Exhibition by <a href="https://untepid.com">Ana Curbelo</a>
