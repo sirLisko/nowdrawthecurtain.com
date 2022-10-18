@@ -29,9 +29,6 @@ const Face = () => {
 
     document.body.addEventListener("mousemove", handleMouseMove());
     document.body.addEventListener("mousemove", handleShow());
-    document.addEventListener("scroll", () => {
-      console.log("asdasdsasadsadsa");
-    });
     document.addEventListener("scroll", handleShow());
     return () => {
       document.body.removeEventListener("mousemove", handleMouseMove());

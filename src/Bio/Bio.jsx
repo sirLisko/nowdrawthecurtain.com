@@ -1,4 +1,5 @@
-import ana from "./ana.jpeg";
+import ana from "./ana.jpg";
+import anaHover from "./ana-hover.jpg";
 
 import styles from "./Bio.module.scss";
 
@@ -6,7 +7,14 @@ const Bio = () => (
   <div className={styles.container}>
     <h3>About the artist</h3>
     <div className={styles.bio}>
-      <img src={ana} alt="Ana Curbelo" />
+      <div className={styles.image}>
+        <img className={styles.hover} src={ana} alt="Ana Curbelo" />
+        <img
+          className={styles.normal}
+          src={anaHover}
+          alt="Ana Curbelo Doodle"
+        />
+      </div>
       <div className={styles.blurp}>
         <p>
           Born in London, Ana grew up in the Canary Islands. In 2010 she left to

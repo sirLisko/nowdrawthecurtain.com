@@ -10,13 +10,17 @@ body {
   background-color: var(--color-main);
 }
 
-h2 b,
 h1 {
   font-family: var(--font-header);
 }
-h2 span {
+h2 {
   font-family: var(--font-header);
+  font-weight: normal;
   font-size: 1.5rem;
+  margin: 0;
+  @media (min-width: 550px) {
+    font-size: 2.5rem;
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -47,9 +51,23 @@ a {
   max-width: 1200px;
   margin: 0 auto;
   @media (min-width: 550px) {
-    min-height: 1000px;
+    min-height: 700px;
     padding-left: 3rem;
     font-size: 2rem;
+  }
+}
+.App-header {
+  font-family: var(--font-header);
+  p {
+    @media (min-width: 550px) {
+      font-size: 2.5rem;
+    }
+  }
+}
+.event {
+  font-size: 1rem;
+  @media (min-width: 550px) {
+    font-size: 1.5rem;
   }
 }
 .footer {
@@ -64,10 +82,12 @@ a {
   height: 75px;
 }
 
-  // .eyes__container {
-  //   animation: App-logo-spin infinite 10s ease-in-out;
-  // }
-
+.hidelogo{
+  margin-bottom: 1rem;
+  @media (min-width: 550px) {
+    font-size: 2rem;
+  }
+}
 
 h1 {
   text-transform: uppercase;
