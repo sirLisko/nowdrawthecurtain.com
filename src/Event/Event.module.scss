@@ -1,11 +1,11 @@
 .box {
-  overflow: hidden;
-  min-height: 1000px;
-  height: calc(100vh - 2rem);
   display: flex;
   align-items: center;
-  @media (max-width: 549px) {
-    padding: 7rem 0;
+  @media (min-width: 550px) {
+    height: calc(100vh - 2rem);
+  }
+  @media (max-width: 550px) {
+    overflow: hidden;
   }
 }
 
