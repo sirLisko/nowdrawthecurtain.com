@@ -1,19 +1,17 @@
 import bookclub from "./bookclub.png";
 import svp from "./svp.png";
 
-const Footer = ({ hideLogos }) => (
-  <div className="footer">
-    <div className={hideLogos ? "hidelogo" : ""}>#nowdrawthecurtain</div>
-    {!hideLogos && (
-      <>
-        <div className="logo">
-          <img src={bookclub} alt="The Bookclub" />
-        </div>
-        <div className="logo">
-          <img src={svp} alt="Skye Victoria Project" />
-        </div>
-      </>
-    )}
+import styles from "./Footer.module.scss";
+
+const Footer = () => (
+  <div className={styles.footer}>
+    <div>#nowdrawthecurtain</div>
+    <div>
+      <img src={bookclub} alt="The Bookclub" />
+    </div>
+    <div>
+      <img src={svp} alt="Skye Victoria Project" />
+    </div>
     <div>
       Made with ♥ by{" "}
       <a href="https://sirlisko.com">Luca Lischetti (@sirLisko)</a>
