@@ -36,11 +36,13 @@
     transition: opacity 3s ease;
     width: 100%;
   }
-  &:hover .hover {
-    opacity: 1;
-  }
   .hover {
-    opacity: 0;
+    animation-name: pulse;
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
     z-index: 1;
   }
 }
@@ -50,5 +52,14 @@
   font-size: 1.5rem;
   @media (min-width: 550px) {
     font-size: 2rem;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
