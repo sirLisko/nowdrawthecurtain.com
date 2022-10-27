@@ -3,6 +3,7 @@ import throttle from "lodash.throttle";
 import debounce from "lodash.debounce";
 
 import face from "./face-no-eyes.png";
+import faceMobile from "./face.png";
 import "./Face.scss";
 
 const left = 180;
@@ -15,6 +16,11 @@ const Face = () => {
   const rY = document.body.clientWidth - right;
 
   useEffect(() => {
+    if (document.body.clientWidth < 550) {
+      setShowFace(true);
+      return;
+    }
+
     const faceMove = (e: MouseEvent) => {
       if (!showFace) {
         setShowFace(true);
@@ -27,14 +33,11 @@ const Face = () => {
         setShowFace(false);
       }, 1500);
 
-    document.body.addEventListener("mousemove", handleMouseMove());
-    document.body.addEventListener("mousemove", handleShow());
-    document.addEventListener("scroll", handleShow());
+    window.addEventListener("mousemove", handleMouseMove());
+    window.addEventListener("mousemove", handleShow());
     return () => {
-      document.body.removeEventListener("mousemove", handleMouseMove());
-      document.body.removeEventListener("mousemove", handleShow());
-      document.body.removeEventListener("scroll", handleMouseMove());
-      document.body.removeEventListener("scroll", handleShow());
+      window.removeEventListener("mousemove", handleMouseMove());
+      window.removeEventListener("mousemove", handleShow());
     };
   }, [showFace]);
 
@@ -55,7 +58,8 @@ const Face = () => {
           transform: !showFace ? "translateX(100%)" : "translateX(0%)",
         }}
       >
-        <img src={face} alt="logo" />
+        <img className="face__desktop" src={face} alt="logo" />
+        <img className="face__mobile" src={faceMobile} alt="logo with eyes" />
         <div className="eyes__container">
           <span
             className="eyes eyes--left"
