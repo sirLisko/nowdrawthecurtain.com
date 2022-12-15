@@ -15,6 +15,12 @@ const Home = () => {
   return (
     <div>
       <div className={styles.splash}>
+        <div className={styles.banner}>
+          <div>
+            Due to popularity the exhibition has been extended until the end of
+            January, 2023
+          </div>
+        </div>
         <header className={styles.header}>
           {name && <h2>{name}, you are invited to</h2>}
           <h1>Now draw the curtain</h1>
