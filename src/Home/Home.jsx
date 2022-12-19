@@ -15,32 +15,30 @@ const Home = () => {
   return (
     <div>
       <div className={styles.splash}>
+        <div className={styles.banner}>
+          <div>
+            Due to popularity the exhibition has been extended until the end of
+            January, 2023
+          </div>
+        </div>
         <header className={styles.header}>
           {name && <h2>{name}, you are invited to</h2>}
           <h1>Now draw the curtain</h1>
           <p>
             Solo Exhibition by <a href="https://untepid.com">Ana Curbelo</a>
-            <span>02.11.22 - 10.12.22</span>
+            <span>02.11.22 - 30.01.23</span>
           </p>
         </header>
         <div className={styles.event}>
-          <span>Launch night</span>
-          <span>
-            <a
-              href="https://www.eventbrite.co.uk/e/svp-presents-ana-curbelo-exhibition-opening-party-at-the-book-club-tickets-444025300627"
-              title="Get your spot"
-            >
-              02.11 - 7pm till late
-            </a>
-          </span>
           <span>The Book Club</span>
           <span>EC2A 4RH</span>
+          <span>London</span>
           <span style={{ marginTop: "1rem" }}>
             <a
-              href="https://www.eventbrite.co.uk/e/svp-presents-ana-curbelo-exhibition-opening-party-at-the-book-club-tickets-444025300627"
-              title="Get your spot"
+              href="https://www.skyevictoriaprojects.com/store"
+              title="Shop the collection"
             >
-              RSVP here
+              Shop the collection
             </a>
           </span>
         </div>
