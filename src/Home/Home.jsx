@@ -1,5 +1,6 @@
 import Bio from "../Bio/Bio";
 import Event from "../Event/Event";
+import Gallery from "../Gallery/Gallery";
 import Venue from "../Venue/Venue";
 
 import styles from "./Home.module.scss";
@@ -44,6 +45,7 @@ const Home = () => {
         </div>
       </div>
       <Event />
+      <Gallery />
       <Bio />
       <Venue />
     </div>
