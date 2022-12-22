@@ -2,7 +2,7 @@ import styles from "./Venue.module.scss";
 import Footer from "../Footer/Footer";
 
 const Venue = () => (
-  <div className={styles.box}>
+  <div id="venue" className={styles.box}>
     <div className={styles.container}>
       <h3>The Venue</h3>
       <div className={styles.times}>

@@ -4,7 +4,7 @@ import anaHover from "./ana-hover.jpg";
 import styles from "./Bio.module.scss";
 
 const Bio = () => (
-  <div className={styles.container}>
+  <div id="about" className={styles.container}>
     <h3>About the artist</h3>
     <div className={styles.bio}>
       <div className={styles.image}>
