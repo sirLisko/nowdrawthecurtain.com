@@ -1,0 +1,59 @@
+
+.container {
+  max-width: 2500px;
+  padding: 3rem;
+  h3 {
+    font-family: var(--font-header);
+    text-align: center;
+    font-size: 2.5rem;
+  }
+}
+
+.merch {
+  display: flex;
+  justify-content: space-around;
+  gap: 3rem;
+  @media (max-width: 550px) {
+    flex-direction: column;
+  }
+  div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+
+.image {
+  position: relative;
+  display: block;
+  max-width: 500px;
+  width: 100%;
+  flex-shrink: 0;
+  aspect-ratio: 1/1;
+  img {
+    position: absolute;
+    transition: opacity 1s ease-in-out;
+    width: 100%;
+  }
+  &:hover .hover {
+    opacity: 0;
+  }
+  .hover {
+    z-index: 1;
+  }
+}
+
+button {
+  background: #121212;
+  border: 0;
+  padding: 1rem;
+  color: #fff;
+  cursor: pointer;
+  font-family: var(--font-main);
+  letter-spacing: 2px;
+  &:hover {
+    font-weight: bold;
+  }
+}

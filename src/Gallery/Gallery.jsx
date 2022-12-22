@@ -20,7 +20,7 @@ const Gallery = () => {
     setViewerIsOpen(false);
   };
   return (
-    <div className={styles.container}>
+    <div id="gallery" className={styles.container}>
       <h3>Gallery</h3>
       <PhotoGallery photos={photos} onClick={openLightbox} />
       <ModalGateway>
