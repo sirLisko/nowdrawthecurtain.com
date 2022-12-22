@@ -6,6 +6,7 @@ import Venue from "../Venue/Venue";
 import styles from "./Home.module.scss";
 
 const Gallery = lazy(() => import("../Gallery/Gallery"));
+const Merch = lazy(() => import("../Merch/Merch"));
 
 const Home = () => {
   const invite =
@@ -49,6 +50,7 @@ const Home = () => {
       <Event />
       <Gallery />
       <Bio />
+      <Merch />
       <Venue />
     </div>
   );
