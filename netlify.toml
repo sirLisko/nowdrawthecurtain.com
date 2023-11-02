@@ -2,7 +2,4 @@
 command = "npm run build"
 publish = "build"
 
-[[redirects]]
-from = "/group-art-show-2023/*"
-to = "https://group-art-show-2023.netlify.app/:splat"
-status = 200
+# Redirects are in /public/_redirects
